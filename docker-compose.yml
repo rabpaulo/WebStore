@@ -1,0 +1,54 @@
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-lingerieflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-development-only}
+      POSTGRES_DB: ${POSTGRES_DB:-lingerieflow}
+    ports:
+      - '127.0.0.1:${POSTGRES_PORT:-5434}:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-lingerieflow}:${POSTGRES_PASSWORD:-local-development-only}@database:5432/${POSTGRES_DB:-lingerieflow}?schema=public
+      JWT_SECRET: ${JWT_SECRET:?Defina JWT_SECRET no arquivo .env}
+      CORS_ORIGIN: http://localhost:${FRONTEND_PORT:-5173}
+      PORT: 3000
+      NODE_ENV: production
+    ports:
+      - '127.0.0.1:${API_PORT:-3005}:3000'
+    depends_on:
+      database:
+        condition: service_healthy
+    command: sh -c "npm run db:migrate -w backend && npm run db:seed -w backend && npm run start -w backend"
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'node',
+          '-e',
+          "fetch('http://localhost:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - '127.0.0.1:${FRONTEND_PORT:-5173}:80'
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  postgres_data:

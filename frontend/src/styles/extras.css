@@ -1,0 +1,93 @@
+.month-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #dde2d5;
+  border-radius: 6px;
+  padding: 0 11px;
+  background: white;
+  color: #6a7360;
+}
+.month-picker input {
+  border: 0;
+  box-shadow: none;
+  width: 145px;
+  min-height: 38px;
+  font-size: 10px;
+  padding: 8px 0;
+  color: #66745a;
+}
+.chart-unit {
+  font-size: 13px;
+  color: #6b765e;
+  letter-spacing: 0;
+}
+.chart-period {
+  text-transform: capitalize;
+  font-size: 9px;
+  color: #6b7460;
+}
+.health-note > svg {
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.health-note > a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  color: #677557;
+  margin-top: 10px;
+}
+.replenishment-rule {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.replenishment-rule .text-link {
+  font-size: 9px;
+}
+.topbar-role {
+  display: block;
+  font-size: 8px;
+  color: #6b7264;
+  margin-top: 2px;
+}
+.category-create {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: -5px 0 20px auto;
+  font-size: 10px;
+  display: flex;
+}
+.stock-form-grid {
+  margin-top: 18px;
+}
+.replenishment-intro {
+  margin-bottom: 18px;
+}
+.order-cancelled {
+  margin-bottom: 22px;
+}
+.order-audit-link {
+  margin-top: 20px;
+  font-size: 11px;
+}
+.lookup-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #697560;
+}
+.lookup-pagination .button {
+  font-size: 9px;
+  min-height: 24px;
+}
+.chart-bar {
+  min-height: 0;
+}
+.health-bar span[style*='flex: 0'] {
+  min-width: 0;
+}

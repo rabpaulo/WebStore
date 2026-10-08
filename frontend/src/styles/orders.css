@@ -1,0 +1,117 @@
+.order-builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 335px;
+  gap: 22px;
+  align-items: start;
+}
+.order-builder-cart {
+  position: sticky;
+  top: 24px;
+}
+.cart-body {
+  padding: 18px 20px;
+}
+.cart-item {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.cart-item-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.cart-item strong {
+  font-size: 11px;
+  color: #60774b;
+}
+.cart-item small {
+  font-size: 9px;
+  color: #6a7160;
+  display: block;
+}
+.cart-item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.quantity-input {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.quantity-input input {
+  width: 54px;
+  min-height: 29px;
+  padding: 5px 7px;
+  font-size: 11px;
+}
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0;
+  font-size: 12px;
+  color: #677555;
+}
+.cart-total strong {
+  font-size: 24px;
+  letter-spacing: -0.8px;
+  color: #4c6935;
+}
+.cart-actions {
+  display: grid;
+  gap: 10px;
+}
+.cart-note {
+  font-size: 10px;
+  color: #6d7465;
+  text-align: center;
+  margin-top: 12px;
+}
+.customer-select-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: #67735c;
+  margin-bottom: 10px;
+}
+.customer-select-heading .button {
+  min-height: 25px;
+  padding: 3px 5px;
+  font-size: 10px;
+}
+.cart-customer {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.cart-customer select {
+  font-size: 11px;
+}
+.customer-search {
+  margin-bottom: 10px;
+}
+.stock-number {
+  color: #5f7949;
+  font-weight: 500;
+}
+.stock-number.low {
+  color: #876e44;
+}
+.stock-number.out {
+  color: #8e6961;
+}
+.customer-avatar {
+  background: #eef1e7;
+  color: #687358;
+  border: 1px solid #e4eada;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+}

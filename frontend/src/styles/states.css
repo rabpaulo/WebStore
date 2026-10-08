@@ -1,0 +1,43 @@
+.empty-state,
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 58px 20px;
+  color: #6c7265;
+  gap: 12px;
+}
+.empty-state h3,
+.error-state h3 {
+  font-size: 14px;
+  color: #5b6552;
+}
+.empty-state p,
+.error-state p {
+  max-width: 430px;
+  font-size: 12px;
+  color: #6b7064;
+}
+.loading-state {
+  padding: 25px;
+}
+.skeleton {
+  background: #edf0e8;
+  border-radius: 4px;
+  animation: skeleton 1.4s ease-in-out infinite;
+}
+.skeleton-heading {
+  height: 20px;
+  width: 35%;
+  margin-bottom: 25px;
+}
+.skeleton-row {
+  height: 45px;
+  margin-bottom: 13px;
+}
+@keyframes skeleton {
+  50% {
+    opacity: 0.4;
+  }
+}

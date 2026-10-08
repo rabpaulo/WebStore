@@ -1,0 +1,137 @@
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100dvh;
+  background: #fff;
+}
+.login-story {
+  background: #eef0e7;
+  padding: 45px 55px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e4e8da;
+}
+.login-story-body {
+  margin: auto 0;
+  padding: 75px 0;
+}
+.login-story h1 {
+  font-size: clamp(36px, 4.4vw, 66px);
+  line-height: 1.16;
+  letter-spacing: -2.8px;
+  margin: 22px 0 25px;
+  color: #3f4e31;
+  font-weight: 500;
+}
+.login-story h1 > span {
+  color: #657354;
+}
+.login-story-body > p {
+  color: #69725c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.login-capabilities {
+  margin-top: 35px;
+  display: grid;
+  gap: 16px;
+  color: #687559;
+  font-size: 11px;
+}
+.login-capabilities > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-story-foot {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #6a725f;
+  font-size: 10px;
+}
+.login-form-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 40px;
+  position: relative;
+}
+.login-form-container {
+  width: 100%;
+  max-width: 350px;
+}
+.login-form-container h2 {
+  font-size: 27px;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+.login-form-container > p {
+  font-size: 12px;
+  color: #6c7264;
+  margin-bottom: 30px;
+}
+.login-form-container form .button {
+  margin-top: 12px;
+  justify-content: space-between;
+  padding: 12px 16px;
+  font-size: 12px;
+}
+.password-input {
+  position: relative;
+}
+.password-input input {
+  padding-right: 43px;
+  font-size: 12px;
+}
+.password-input button {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #6d7564;
+  display: grid;
+  place-items: center;
+}
+.demo-credentials {
+  border-top: 1px solid var(--border);
+  margin-top: 34px;
+  padding-top: 24px;
+}
+.demo-credentials > strong {
+  font-size: 11px;
+  color: #677259;
+}
+.demo-credentials > p {
+  font-size: 10px;
+  color: #6c7060;
+  margin: 7px 0 13px;
+}
+.demo-credentials button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  background: #f8f9f4;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #69775c;
+  padding: 11px;
+  margin-top: 7px;
+  text-align: left;
+}
+.demo-credentials button:hover {
+  background: #edf1e5;
+}
+.login-footer {
+  position: absolute;
+  bottom: 27px;
+  font-size: 9px;
+  color: #6c7068;
+}
+.login-mobile-brand {
+  display: none;
+}
